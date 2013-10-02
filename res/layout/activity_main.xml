@@ -17,13 +17,39 @@
         android:text="@string/sensorvalue" />
 
     <ProgressBar
-        android:id="@+id/progressBar1"
+        android:id="@+id/sensorBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/sensorData"
         android:layout_centerHorizontal="true"
+        android:max="250"
         android:minHeight="30dp"
         android:minWidth="250dp" />
+
+    <EditText
+        android:id="@+id/codeEdit"
+        android:inputType="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/codeView1"
+        android:layout_alignBottom="@+id/codeView1"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/codeView1"
+        android:ems="10"
+        android:text="@string/code" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/codeView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/progressBar1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/codeText"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>
