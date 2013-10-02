@@ -52,7 +52,6 @@ public class MainActivity extends Activity implements SensorEventListener {
 		if (requestCode == SCAN_QR_CODE_REQUEST_CODE) {
 			if (resultCode == RESULT_OK) {
 				String qrCode = intent.getStringExtra("SCAN_RESULT");
-				Toast.makeText(this, qrCode, Toast.LENGTH_LONG).show();
 				sendlog(qrCode);
 			}
 		}
@@ -116,11 +115,8 @@ public class MainActivity extends Activity implements SensorEventListener {
 		 
 		intent.putExtra("ch.appquest.taskname", "REWOP.Metall-Detektor");
 		intent.putExtra("ch.appquest.logmessage", qrCode + ": " + code);
-		Toast.makeText(this, qrCode + ": " + code, Toast.LENGTH_LONG).show();
-		
 		 
 		startActivity(intent);
-		
 	}
     
 }
